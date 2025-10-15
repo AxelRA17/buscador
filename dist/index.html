@@ -3,12 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Buscador y Resaltador de Palabras</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h1>Buscador de Palabras</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="bloque-texto" class="form-label"><strong>Ingresa el texto o párrafo aquí:</strong></label>
+                            <textarea class="form-control" id="bloque-texto" rows="6" placeholder="Escribe o pega tu texto..."></textarea>
+                        </div>
 
-    </div>  
-    <script src="./bundle.js"></script>  
+                        <div class="mb-3">
+                            <label for="in_palabra" class="form-label"><strong>Palabra a buscar:</strong></label>
+                            <input type="text" class="form-control" id="in_palabra" placeholder="Escribe la palabra que quieres resaltar">
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                            <button class="btn btn-primary" type="button" id="btn_buscar">Buscar y Resaltar</button>
+                            <button class="btn btn-outline-secondary" type="button" id="btn_limpiar">Limpiar Todo</button>
+                        </div>
+                        
+                        <hr class="my-4">
+
+                        <div>
+                            <h2>Resultado:</h2>
+                            <div id="resultado" class="p-3 bg-light border rounded">
+                                <p class="text-muted">Aquí aparecerá el texto con la palabra resaltada.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./bundle.js"></script>
 </body>
 </html>
